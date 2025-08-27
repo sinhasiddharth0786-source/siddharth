@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Siddharth Sinha — Research Portfolio</title>
+  <meta name="description" content="Portfolio website of Dr. Siddharth Sinha: cancer genomics, computational structural biology, molecular dynamics, AI/ML in biomedicine." />
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: #121933;
+      --muted:#9fb3c8;
+      --accent:#7dd3fc;
+      --text:#f0f3f9;
+      --chip:#1e2649;
+      --glow: 0 10px 30px rgba(125,211,252,.25);
+    }
+    html,body{margin:0;padding:0;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background: var(--bg); color: var(--text);}
+    a{color: var(--accent); text-decoration: none}
+    .container{max-width:1100px;margin:auto;padding:24px}
+    header{position:sticky;top:0;background: linear-gradient(180deg, rgba(11,16,32,.96), rgba(11,16,32,.6) 70%, transparent);backdrop-filter: blur(8px); z-index: 10}
+    nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:10px 24px}
+    nav .links a{padding:8px 12px;border-radius:10px}
+    nav .links a:hover{background: rgba(125,211,252,.12)}
+    .hero{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;margin-top:18px}
+    .avatar{width:180px;height:180px;border-radius:24px;object-fit:cover;box-shadow: var(--glow)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;margin:4px 6px 0 0;border-radius:999px;background: var(--chip); color: var(--muted); font-size: 13px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:linear-gradient(180deg,#1b254d,#152045); color:white;border:1px solid #2a3670; box-shadow: var(--glow);}
+    .btn:hover{filter:brightness(1.1)}
+    h1{font-size:34px;margin:0 0 8px}
+    h2{font-size:24px;margin:30px 0 12px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
+    .grid.cols-2{grid-template-columns: repeat(2, 1fr)}
+    @media(max-width: 880px){.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}.hero{grid-template-columns:1fr;}}
+    .card{background: var(--card); border:1px solid #243169; border-radius:16px; padding:18px; box-shadow: var(--glow)}
+    .muted{color: var(--muted)}
+    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#0f1530;border:1px solid #273067;border-radius:8px;padding:2px 8px}
+    ul.clean{list-style:none;padding:0;margin:0}
+    ul.clean li{padding:8px 0;border-bottom:1px dashed #2a3770}
+    .chip{background: var(--chip); border:1px solid #2a3670; color: var(--muted); padding:8px 10px; border-radius:12px; display:inline-flex; gap:8px; align-items:center}
+    .section-top{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    details{background: #0e1533; border:1px solid #273a7a; border-radius:14px; padding:12px 14px;}
+    details summary{cursor:pointer; font-weight:600}
+    .timeline{position:relative}
+    .timeline:before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:#243169}
+    .t-item{position:relative; padding-left:28px; margin:14px 0}
+    .t-item:before{content:""; position:absolute; left:4px; top:6px; width:12px; height:12px; border-radius:999px; background:var(--accent); box-shadow: var(--glow)}
+    .footer{margin:40px 0 20px; text-align:center; color: var(--muted)}
+    .icon{width:18px;height:18px;display:inline-block;vertical-align:middle}
+    .table{width:100%;border-collapse:collapse}
+    .table th,.table td{border-bottom:1px solid #2a3770;padding:10px;vertical-align:top}
+    .table th{color:#a9b7d9;text-align:left}
+    .pill{padding:2px 8px;border-radius:999px;border:1px solid #3751bb;background:#0f1a49;color:#b7c9ff;font-size:12px}
+    .right{float:right}
+    .map{border:0;width:100%;height:300px;border-radius:16px}
+    .sr{position:absolute; left:-9999px}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div style="display:flex; align-items:center; gap:10px">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 2 5 5.1 5 9.1c0 6 7 12.9 7 12.9s7-6.9 7-12.9C19 5.1 16 2 12 2zm0 9.3a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4z"/></svg>
+        <strong>Dr. Siddharth Sinha</strong>
+      </div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <img src="photo.jpg" alt="Portrait of Dr. Siddharth Sinha" class="avatar" />
+      <div>
+        <h1>Dr. Siddharth Sinha</h1>
+        <p class="muted">Cancer Genomics • Computational Structural Biology • Molecular Dynamics • AI/ML in Biomedicine</p>
+        <p>An enthusiastic researcher with expertise in cancer genomes, big data analytics, bioinformatics, drug design, and computational structural biology. Focused on protein structure–based evaluation, MD simulations, free energy estimation, ligand binding, and conformational analysis for variant classification and target discovery.</p>
+        <div>
+          <a class="btn" href="SIDDHARTH_SINHA_CV.pdf" download>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1z"/><path d="M5 19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4a1 1 0 1 0-2 0v4H7v-4a1 1 0 1 0-2 0v4z"/></svg>
+            Download CV
+          </a>
+          <a class="btn" href="#contact" style="margin-left:8px">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8l9 5 9-5z"/><path d="M19 6H5l7 4 7-4z"/></svg>
+            Contact
+          </a>
+        </div>
+        <div style="margin-top:10px">
+          <span class="tag">Macau, Macao S.A.R.</span>
+          <span class="tag">University of Macau</span>
+          <span class="tag">Open to opportunities</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK CONTACT -->
+    <section class="card" style="margin-top:20px">
+      <div class="grid cols-3">
+        <div>
+          <div class="muted">Email</div>
+          <a href="mailto:siddhartha.umac@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
+            <span class="right">siddhartha.umac@gmail.com</span>
+          </a>
+        </div>
+        <div>
+          <div class="muted">Phone</div>
+          <a href="tel:+85363474272">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg>
+            <span class="right">+853 6347 4272</span>
+          </a>
+        </div>
+        <div>
+          <div class="muted">Location</div>
+          <a href="https://maps.google.com/?q=University%20of%20Macau" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.9 7 13 7 13s7-7.1 7-13c0-3.9-3.1-7-7-7Zm0 9.2A2.2 2.2 0 1 1 12 6.8a2.2 2.2 0 0 1 0 4.4Z"/></svg>
+            <span class="right">University of Macau</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-top">
+        <h2>Skills</h2>
+        <span class="pill">Biomedical • Computational • Programming</span>
+      </div>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Biomedical & Genomics</h3>
+          <ul class="clean">
+            <li>Cancer genomics; Variant Calling, Joint Genotyping (GATK), WES, sRNA‑seq, NGS</li>
+            <li>Clinical data analysis; DNA damage repair genes (BRCA1/2, PTEN, TP53, MLH1, MSH2)</li>
+            <li>Molecular biology: Western Blot, ELISA, SDS‑PAGE, PCR</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Computational Structural Biology</h3>
+          <ul class="clean">
+            <li>Molecular Dynamics (all‑atom & CG), REMD, Free‑energy calculations</li>
+            <li>Protein–ligand modeling: Homology & Pharmacophore modeling, Docking</li>
+            <li>3D & G‑QSAR, QM/MM (semi‑empirical)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Data & Software</h3>
+          <ul class="clean">
+            <li>Big Data Analytics; AI & Machine Learning in biosciences</li>
+            <li>Python, R, C++; High‑performance computing (HPCC)</li>
+            <li>Statistics for biomedicine; Deep learning (autoencoders for MD)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS / HIGHLIGHTS -->
+    <section id="achievements">
+      <h2>Achievements & Highlights</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Publications</h3>
+          <p>24 peer‑reviewed articles spanning computational structural bioinformatics, drug design, and cancer genomics.</p>
+        </div>
+        <div class="card">
+          <h3>Awards</h3>
+          <ul class="clean">
+            <li>Silver Prize (Poster), Apr 2023</li>
+            <li>Oral Speaker – Honorable Mention, May 2020</li>
+            <li>First Prize (Poster), Apr 2013</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Funding & Service</h3>
+          <ul class="clean">
+            <li>Post‑doc projects on BRCA1/2, PTEN, TP53, MLH1 accepted for extramural funding</li>
+            <li>Professional associations: FENS, ISCB</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="section-top">
+        <h2>Publications</h2>
+        <span class="pill">Grouped by year • Field shown</span>
+      </div>
+
+      <details open>
+        <summary>2024</summary>
+        <table class="table">
+          <thead><tr><th>Year</th><th>Field</th><th>Citation / Link</th></tr></thead>
+          <tbody>
+            <tr><td>2024</td><td>Computational Structural Bioinformatics</td><td>Comprehensive classification of <em>TP53</em> somatic missense variants based on structural stability. <a href="https://doi.org/10.1093/bib/bbae400" target="_blank" rel="noopener">Brief. Bioinf.</a></td></tr>
+            <tr><td>2024</td><td>Genomics</td><td>Portuguese BRCA pathogenic variation & admixture impact. <a href="https://doi.org/10.1186/s12864-024-10311-4" target="_blank" rel="noopener">BMC Genomics</a></td></tr>
+            <tr><td>2024</td><td>Genomics</td><td>Pathogenic variants in DNA damage repair genes arose in recent history. <a href="https://doi.org/10.1186/s12885-024-12160-6" target="_blank" rel="noopener">BMC Cancer</a></td></tr>
+            <tr><td>2024</td><td>Computational Structural Bioinformatics</td><td><em>MLH1</em> VUS classification using protein structure‑based DL + Ramachandran + MD. <a href="https://doi.org/10.3390/ijms25020850" target="_blank" rel="noopener">IJMS</a></td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary>2023</summary>
+        <table class="table">
+          <thead><tr><th>Year</th><th>Field</th><th>Citation / Link</th></tr></thead>
+          <tbody>
+            <tr><td>2023</td><td>Computational Structural Bioinformatics</td><td>Classification of <em>PTEN</em> missense VUS through exascale simulations. <a href="https://doi.org/10.1093/bib/bbad361" target="_blank" rel="noopener">Brief. Bioinf.</a></td></tr>
+            <tr><td>2023</td><td>Genomics</td><td>Asian BRCA variation: ethnic specificity & deleteriousness from 7,500+ variants. <a href="https://doi.org/10.1002/ijc.34359" target="_blank" rel="noopener">Int J Cancer</a></td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary>2022</summary>
+        <table class="table">
+          <thead><tr><th>Year</th><th>Field</th><th>Citation / Link</th></tr></thead>
+          <tbody>
+            <tr><td>2022</td><td>Review / Methods</td><td>Applications of molecular dynamics simulation in protein study. <a href="https://doi.org/10.3390/membranes12090844" target="_blank" rel="noopener">Membranes</a></td></tr>
+            <tr><td>2022</td><td>Computational Structural Bioinformatics</td><td>BRCA2 BRC4 deleterious VUS via MD. <a href="https://doi.org/10.1093/bfgp/elac003" target="_blank" rel="noopener">Brief. Funct. Genom.</a></td></tr>
+            <tr><td>2022</td><td>Virology / Structural</td><td>SARS‑CoV‑2 RBD double mutations increase transmissibility via enhanced ACE2 interaction. <a href="https://doi.org/10.3390/v14010001" target="_blank" rel="noopener">Viruses</a></td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary>2021–2018</summary>
+        <table class="table">
+          <thead><tr><th>Year</th><th>Field</th><th>Citation / Link</th></tr></thead>
+          <tbody>
+            <tr><td>2021</td><td>Computational Structural Bioinformatics</td><td>Deleterious <em>TP53</em> missense VUS via structural stability. <a href="https://doi.org/10.3390/ijms222111345" target="_blank" rel="noopener">IJMS</a></td></tr>
+            <tr><td>2020</td><td>Methods</td><td>Ramachandran + MD for variant classification; <em>TP53</em> model. <a href="https://doi.org/10.1016/j.csbj.2020.11.041" target="_blank" rel="noopener">CSBJ</a></td></tr>
+            <tr><td>2020</td><td>Computational Structural Bioinformatics</td><td>BRCA1 BRCT VUS classification by MD. <a href="https://doi.org/10.1016/j.csbj.2020.03.013" target="_blank" rel="noopener">CSBJ</a></td></tr>
+            <tr><td>2019</td><td>Cancer Genomics</td><td>TNBC: DNA methylation + transcription biomarkers & targets. <a href="https://doi.org/10.3390/cancers11111724" target="_blank" rel="noopener">Cancers</a></td></tr>
+            <tr><td>2019</td><td>Genomics</td><td>BRCA1/2 germline variation in 30k+ Chinese HBOC patients. <a href="https://doi.org/10.1002/ijc.32176" target="_blank" rel="noopener">Int J Cancer</a></td></tr>
+            <tr><td>2018</td><td>Neurogenetics</td><td>ATXN2 nsSNPs: simulation & structural consequences in SCA2. <a href="https://doi.org/10.1002/jcb.26209" target="_blank" rel="noopener">J Cell Biochem</a></td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details>
+        <summary>2017–2011 (Drug Design & Methods)</summary>
+        <table class="table">
+          <thead><tr><th>Year</th><th>Field</th><th>Citation / Link</th></tr></thead>
+          <tbody>
+            <tr><td>2017</td><td>Enzyme Inhibition</td><td>Chymase inhibition: free energy & decomposition. <a href="https://doi.org/10.1016/j.gene.2017.01.030" target="_blank" rel="noopener">Gene</a></td></tr>
+            <tr><td>2017</td><td>TB Resistance</td><td>Rifampicin resistance in <em>M. tuberculosis</em> RNAP β mutants. <a href="https://doi.org/10.1002/jcb.26124" target="_blank" rel="noopener">J Cell Biochem</a></td></tr>
+            <tr><td>2017</td><td>HDAC Inhibitors</td><td>Class IIa HDAC inhibitors toward SCA2: 3D‑QSAR & pharmacophore. <a href="https://doi.org/10.3389/fnins.2016.00606" target="_blank" rel="noopener">Front Neurosci</a></td></tr>
+            <tr><td>2016</td><td>HDAC Inhibitors</td><td>Hydroxamic‑based HDAC inhibitors: fragment G‑QSAR & MD. <a href="https://doi.org/10.1080/07391102.2015.1113386" target="_blank" rel="noopener">J Biomol Struct Dyn</a></td></tr>
+            <tr><td>2015</td><td>Immunology</td><td><em>H. pylori</em> NAP as potential Treg modulator in asthma. <a href="https://doi.org/10.3389/fmicb.2015.00493" target="_blank" rel="noopener">Front Microbiol</a></td></tr>
+            <tr><td>2011</td><td>MMP9 Inhibitors</td><td>Structural insights into MMP9 inhibitor binding. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3046033/" target="_blank" rel="noopener">Bioinformation</a></td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <p class="muted" style="margin-top:8px">Full publication list available on Google Scholar, ResearchGate, and ORCID (see Profile Links below).</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card timeline">
+        <div class="t-item">
+          <strong>Postdoctoral Fellow</strong> — University of Macau (Nov 2017 – Apr 2024)
+          <div class="muted">Cancer predisposition genes; MD simulations (REMD), WES/TAS/RNA‑seq analytics; target design across enzymes, ion channels & receptors.</div>
+        </div>
+        <div class="t-item">
+          <strong>Senior Research Fellow</strong> — Jawaharlal Nehru University, Delhi (Feb 2015 – Oct 2017)
+          <div class="muted">Drug repurposing for Class IIa HDAC; HTS with pharmacophore + QSAR; designed/validated HIC & DHC on SH‑SY5Y and IMR‑32.</div>
+        </div>
+        <div class="t-item">
+          <strong>Senior Programmer</strong> — Bioinformatics Center, Biotech Park, Lucknow (Dec 2012 – Jul 2013)
+          <div class="muted">Bioinformatics software validation; training & workshops; Python, R, C++.</div>
+        </div>
+        <div class="t-item">
+          <strong>Trainee Scientist</strong> — ACS bioINFORMATICS, Lucknow (Aug 2008 – Oct 2012)
+          <div class="muted">Course design; industry training; collaborations; MMP9 inhibitor research.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <strong>Ph.D., Applied Health Sciences (Computational Structural Bioinformatics)</strong>
+          <div class="muted">TERI School of Advanced Studies, New Delhi — 2018</div>
+          <p>Thesis on histone deacetylase (HDAC) in SCA2 using homology modeling, docking, pharmaco‑informatics, MD, 3D/G‑QSAR and in‑vitro validation.</p>
+        </div>
+        <div class="card">
+          <strong>B.Tech, Biotechnology</strong>
+          <div class="muted">Amity University, Delhi (NCR) — 2010</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING & ACTIVITIES -->
+    <section id="teaching">
+      <h2>Teaching, Conferences & Professional Associations</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Teaching & Supervision</h3>
+          <ul class="clean">
+            <li>Supervised 50+ MSc dissertations (University of Macau)</li>
+            <li>Teaching Fellow: Biomedical Statistics & Big Data in Cancer Biology (2019, 2020, 2022, 2023)</li>
+            <li>TERI University: Bioinformatics lab (2016–2017), lectures for MSc (2015)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Conferences (Selected)</h3>
+          <ul class="clean">
+            <li>Advanced Methods in MD, Copenhagen — Oral (Dec 2023)</li>
+            <li>EMBO Workshop on Computational Structural Biology, Heidelberg (Dec 2023)</li>
+            <li>Basel Computational Biology Conf. — BRCA2 BRC4 (Sep 2021)</li>
+            <li>4th Symposium on Biomedical Sciences — BRCA1 BRCT (May 2020)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <h3>Professional Associations</h3>
+        <p>Federation of European Neurosciences Society (FENS); International Society for Computational Biology (ISCB)</p>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="links">
+      <h2>Profile Links</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <ul class="clean">
+            <li>Google Scholar — <a href="https://scholar.google.co.in/citations?user=QiN-Z78AAAAJ" target="_blank" rel="noopener">QiN‑Z78AAAAJ</a></li>
+            <li>ResearchGate — <a href="https://www.researchgate.net/profile/Siddharth-Sinha-7" target="_blank" rel="noopener">Profile</a></li>
+            <li>LinkedIn — <a href="https://www.linkedin.com/in/siddharth-sinha-a30b939/" target="_blank" rel="noopener">@siddharth-sinha</a></li>
+            <li>ORCID — <a href="https://orcid.org/0000-0003-3868-1967" target="_blank" rel="noopener">0000‑0003‑3868‑1967</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="muted">Tip: Use the <span class="kbd">Find</span> (Ctrl/⌘+F) in your browser to search titles, authors, or keywords.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP (optional live) -->
+    <section>
+      <h2>Location</h2>
+      <iframe class="map" loading="lazy" src="https://www.google.com/maps?q=University%20of%20Macau&output=embed" allowfullscreen></iframe>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid cols-2">
+        <form class="card" action="https://formspree.io/f/your-endpoint" method="POST">
+          <label>Name<br><input name="name" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #273a7a;background:#0c1433;color:#dce6ff"></label><br>
+          <label>Email<br><input name="email" type="email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #273a7a;background:#0c1433;color:#dce6ff"></label><br>
+          <label>Message<br><textarea name="message" rows="5" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #273a7a;background:#0c1433;color:#dce6ff"></textarea></label>
+          <input type="hidden" name="_subject" value="Website contact — Dr. Siddharth Sinha">
+          <button class="btn" type="submit">Send Message</button>
+          <p class="muted" style="margin-top:8px">No backend? Replace action with <span class="kbd">mailto:siddhartha.umac@gmail.com</span> or use Formspree/Netlify.</p>
+        </form>
+        <div class="card">
+          <h3>Direct</h3>
+          <p>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"/></svg>
+            <a href="mailto:siddhartha.umac@gmail.com">Email me</a>
+          </p>
+          <p>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.3 15.3 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.3 11.3 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .6 3.6 1 1 0 0 1-.25 1Z"/></svg>
+            <a href="tel:+85363474272">+853 6347 4272</a>
+          </p>
+          <p>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.9 7 13 7 13s7-7.1 7-13c0-3.9-3.1-7-7-7Zm0 9.2A2.2 2.2 0 1 1 12 6.8a2.2 2.2 0 0 1 0 4.4Z"/></svg>
+            Macau 999078 (University of Macau)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>© <span id="y"></span> Siddharth Sinha • Built with semantic HTML & a11y in mind • <a href="#about">Back to top ↑</a></p>
+    </section>
+  </main>
+
+  <script>
+    // Update footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
